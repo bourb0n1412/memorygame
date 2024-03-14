@@ -1,7 +1,7 @@
-export default function GameFrame({card, handleChoice, flipped}){
+export default function GameFrame({card, handleChoice, flipped, disabled}){
 
   const handleClick = () => {
-    handleChoice(card)
+    if (!disabled){handleChoice(card)}
   }
 
     return(

@@ -18,9 +18,8 @@ button:hover {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
-  gap: 10px; 
-  width: 150px; 
-  height: 150px; 
+  gap: 5px; 
+  width: 30%;
   margin: auto;
 }
 
@@ -33,11 +32,22 @@ img {
   position: relative;
 }
 
-.card .frontside {
-  transform: rotateY(90deg);
+.frontside {
+  display: none;
   position: absolute;
+  transition-delay: 2006ms;
+}
+
+.backside{
+  transition: all ease-in 3006ms;
+  transition-delay: 2006ms;
 }
 
 .flipped .frontside {
-  transform: rotateY(0deg);
+  display: block;
+  transition-delay: 2006ms;
+}
+
+.flipped .backside{
+  display: none;
 }
